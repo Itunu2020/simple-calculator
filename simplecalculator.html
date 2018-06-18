@@ -1,0 +1,109 @@
+  <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<script>
+ 	var var1; var oper;
+ 	var state = false;
+ 	function button1(u)
+ 	{
+ 		if (state)
+ 		{
+ 			if (show.value=='0')
+ 			{
+ 				show.value= u;
+ 			}
+ 			else
+ 			{
+ 				show.value +=u;
+ 			}
+ 		}
+ 		// show.value = show.value + u;
+ 	}
+	function operator(v){
+ 	var1=show.value;
+ 	oper= v;
+ 	show.value="";
+	}
+	function equas()
+	{
+		var2= show.value
+		if (oper=="-") {result=var1 - var2}
+		 else 	if (oper=="+") {result= parseInt(var1) + parseInt(var2)}
+		 else 	if (oper=="/") {result= parseInt(var1) / parseInt(var2)}
+		 else  	if (oper=="*") {result= parseInt(var1) * parseInt(var2)}
+			show.value=result;
+	}
+	function power()
+	{
+		if (myswitchbutton.value=='OFF')
+		{myswitchbutton.value='ON';
+		show.value="";
+		state=false;}
+		else
+			{myswitchbutton.value="OFF";
+		show.value="0";
+		state=true;}
+	}
+	
+	
+	
+
+ 	// oper=v;
+ 	// }
+ 	// 	function equal(){
+ 	// }
+ 	// // var var2=show.value;
+ 
+ 	// 	if (oper=="+") {
+ 	// 		 show.value= ParseInt(var1)+ ParseInt(var2)
+ 	// 	}
+ 	// 	else if(oper=="+"){
+ 	// 		show.value
+ 
+ 	// }
+
+ 	
+ 	</script>
+ </head>
+ <body>
+ 	<table border="2" height="200px" width="15%" align="center">
+ 		<tr height="30px">
+ 			<td colspan="4"> <input type="text" id="show"></td>
+
+ 		</tr>
+ 		<tr>
+ 			<td><input type="button" value="1" onclick="button1('1')"></td>
+ 			<td><input type="button" value="2" onclick="button1('2')" ></td>
+ 			<td><input type="button" value="3" onclick="button1('3')"></td>
+ 			<td><input type="button" value="+" onclick="operator('+')"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="button" value="4" onclick="button1('4')"></td>
+ 			<td><input type="button" value="5" onclick="button1('5')"></td>
+ 			<td><input type="button" value="6" onclick="button1(6)"></td>
+ 			<td><input type="button" value="-" onclick="operator('-')"></td>
+
+ 		</tr>
+ 		<tr>
+ 			<td><input type="button" value="7" onclick="button1(7)"></td>
+ 			<td><input type="button" value="8" onclick="button1(8)"></td>
+ 			<td><input type="button" value="9" onclick="button1(9)"></td>
+ 			<td><input type="button" value="*" onclick="operator('*')"></td>
+ 		
+ 		</tr>
+ 		<tr>
+ 			<td><input type="button" value="0" onclick="button1(0)"></td>
+ 			<td><input type="button" value="=" onclick="equas('=')"></td>
+ 			<td><input type="button" value="." onclick="button1('.')"></td>
+ 			<td><input type="button" value="/" onclick="operator('/')"></td>
+ 		
+ 		</tr>
+ 		<tr align="center">
+ 			<td colspan="4"><input type="button" value="ON" onclick="power()" id="myswitchbutton"></td>
+ 			<td><input type="button" ></td>
+
+ 		</tr>
+ 	</table>
+ </body>
+ </html>
